@@ -389,3 +389,45 @@ console.log(numberArray); // returns [6]
 the `push` function is impure by altering the array and returning the new `length` of the array, `concat` on the other hand takes the array and concatenates it with the other array producing a whole new array without side effects, and the return value is a new `Array` instance.
 
 Remember that Pure functions are important as they simplify unit testing without any side effects and no need for dependency injection. They also avoid tight coupling and make it harder to break your application by not having any side effects.
+
+### The difference between let and var
+
+- **Scope**: `var` is function-scoped when declared inside a function, and globally scoped when declared outside a function. `let` is block-scoped.
+
+  ```javascript
+  function run() {
+    if (true) {
+      var foo = 'Foo';
+      let bar = 'Bar';
+    }
+    console.log(foo); // Foo
+    console.log(bar); // ReferenceError
+  }
+  run();
+  ```
+
+- **Hoisting**: `var` is hoisted to the top of the enclosing function. `let` is hoisted to the top of the block, but not initialized.
+
+  ```javascript
+  function userDetails(username) {
+    if (username) {
+      console.log(salary); // undefined due to hoisting
+      console.log(age); // ReferenceError: Cannot access 'age' before initialization
+      let age = 30;
+      var salary = 10000;
+    }
+    console.log(salary); //10000 (accessible due to function scope)
+    console.log(age); //error: age is not defined(due to block scope)
+  }
+  userDetails('John');
+  ```
+
+- **Redeclaration**: `var` can be re-declared and updated, `let` can be updated but not re-declared.
+
+  ```javascript
+  var foo = 'Foo 1';
+  var foo = 'Foo 2'; // No problem, 'foo' is replaced.
+
+  let bar = 'Bar 1';
+  let bar = 'Bar 2'; // SyntaxError: Identifier 'bar' has already been declared
+  ```
