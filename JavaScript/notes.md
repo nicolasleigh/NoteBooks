@@ -281,3 +281,41 @@ console.log(deletedItems); // ['Apple', 'Mango']
 > Professional JavaScript for Web Developers 5th - Functions - P402 P407
 
 > [JavaScript Info - Arrow functions revisited](https://javascript.info/arrow-functions)
+
+### First class function
+
+Functions in JavaScript are treated like any other variable. They can be assigned to variables, passed as arguments, and returned from other functions. First-class functions are a necessity for the `functional programming` style, in which the use of `higher-order functions` is a standard practice.
+
+**Assigning a function to a variable**
+
+```javascript
+const foo = () => {
+  console.log('foobar');
+};
+foo(); // Invoke it using the variable
+// foobar
+```
+
+**Passing a function as an argument**
+
+```javascript
+function sayHello() {
+  return 'Hello, ';
+}
+function greeting(helloMessage, name) {
+  console.log(helloMessage() + name);
+}
+// Pass `sayHello` as an argument to `greeting` function
+greeting(sayHello, 'JavaScript!');
+// Hello, JavaScript!
+```
+
+**Returning a function**
+
+```javascript
+function sayHello() {
+  return () => {
+    console.log('Hello!');
+  };
+}
+```
