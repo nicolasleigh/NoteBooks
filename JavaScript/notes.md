@@ -91,3 +91,40 @@ In JavaScript, each object has a private property which holds a link to another 
 The prototype on object instance is available through **Object.getPrototypeOf(obj)** or **obj.\_\_proto\_\_**
 
 > Professional JavaScript for Web Developers 5th - Prototype Inheritance - P347
+
+### The difference between Call, Apply and Bind
+
+- **Call**: The `call()` method calls a function with a given `this` value, and arguments provided one by one.
+
+  ```javascript
+  function greet(arg1, arg2) {
+    return `${arg1}, ${this.name}. ${arg2}`;
+  }
+  const person = { name: 'John' };
+  greet.call(person, 'Hi', 'Bye'); // Hi, John. Bye
+  ```
+
+- **Apply**: The `apply()` method calls a function with a given `this` value, and arguments provided as an array.
+
+  ```javascript
+  function greet(arg1, arg2) {
+    return `${arg1}, ${this.name}. ${arg2}`;
+  }
+  const person = { name: 'John' };
+  greet.apply(person, ['Hi', 'Bye']); // Hi, John. Bye
+  ```
+
+- **Bind**: The `bind()` method creates a new function that, when called, has its `this` keyword set to the provided value.
+
+  ```javascript
+  function greet(arg1, arg2) {
+    return `${arg1}, ${this.name}. ${arg2}`;
+  }
+  const person = { name: 'John' };
+  const greetPerson = greet.bind(person);
+  greetPerson('Hi', 'Bye'); // Hi, John. Bye
+  ```
+
+`Call` and `Apply` are pretty much interchangeable. Both execute the current function immediately. You need to decide whether it’s easier to send in an array or a comma separated list of arguments. You can remember by treating `Call` is for comma (separated list) and `Apply` is for `Array`.
+
+`Bind` creates a new function that will have `this` set to the first parameter passed to `bind()`.
