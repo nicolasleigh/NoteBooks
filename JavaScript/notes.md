@@ -187,3 +187,15 @@ console.log(deletedItems); // ['Apple', 'Mango']
 | Doesn't modify the original array(immutable) | Modifies the original array(mutable)              |
 | Returns the subset of original array         | Returns the deleted elements as array             |
 | Used to pick the elements from array         | Used to remove/replace/add elements from/to array |
+
+### Compare Object and Map
+
+1. The Object type can only use integers, strings, or symbols as keys. A Map can use any type as the key, including functions, objects, and any primitive.
+
+2. The keys in a Map are ordered while keys added to Object are not. Thus, when iterating over it, a Map object returns keys in the order of insertion.
+
+3. You can get the size of a Map easily with the size property, while determining the number of items in an Object is more roundabout, a common way to do it is by using `Object.keys(obj).length`.
+
+4. A Map is an iterable, so it can be directly iterated. The Object does not have a built-in iterator, and so objects are not directly iterable using the JavaScript `for...of` statement. You can get an iterable for an object using `Object.keys` or `Object.entries`. The `for...in` statement allows you to iterate over the `enumerable` properties of an object.
+
+> Professional JavaScript for Web Developers 5th - Choosing Between Objects and Maps - P253
