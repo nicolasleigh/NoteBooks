@@ -128,3 +128,25 @@ The prototype on object instance is available through **Object.getPrototypeOf(ob
 `Call` and `Apply` are pretty much interchangeable. Both execute the current function immediately. You need to decide whether it’s easier to send in an array or a comma separated list of arguments. You can remember by treating `Call` is for comma (separated list) and `Apply` is for `Array`.
 
 `Bind` creates a new function that will have `this` set to the first parameter passed to `bind()`.
+
+### JSON
+
+`JSON` is a text-based data format following JavaScript object syntax. It is useful when you want to transmit data across a network. It is basically just a text file with an extension of .json, and a MIME type of `application/json`
+
+**Parsing**: Converting a string to a native object
+
+```javascript
+const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
+console.log(obj.name); // John
+```
+
+**Stringification**: Converting a native object to a string so that it can be transmitted across the network
+
+```javascript
+const obj = { name: 'John', age: 30, city: 'New York' };
+const myJSON = JSON.stringify(obj);
+console.log(myJSON); // {"name":"John","age":30,"city":"New York"}
+```
+
+> Professional JavaScript for Web Developers 5th - JSON - P844
+> [JavaScript Info - JSON](https://javascript.info/json)
