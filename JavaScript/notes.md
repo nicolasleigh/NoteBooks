@@ -331,3 +331,38 @@ A function that accepts another function as an argument or returns a function is
 ### Unary function
 
 A function that accepts exactly one argument is called a `unary function`.
+
+### Currying function
+
+`Currying` is the process of converting a function that takes multiple arguments into a sequence of functions that each take a single argument.
+
+```javascript
+function curry(f) {
+  // curry(f) does the currying transform
+  return function (a) {
+    return function (b) {
+      return f(a, b);
+    };
+  };
+}
+
+// usage
+function sum(a, b) {
+  return a + b;
+}
+
+let curriedSum = curry(sum);
+
+console.log(curriedSum(1)(2)); // 3
+```
+
+```javascript
+function sum(a, b) {
+  return a + b;
+}
+
+let curriedSum = _.curry(sum); // using _.curry from lodash library
+
+console.log(curriedSum(1, 2)); // 3, still callable normally
+console.log(curriedSum(1)(2)); // 3, called partially
+```
