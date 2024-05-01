@@ -501,3 +501,41 @@ function memoize(fn) {
 `Hoisting` is a JavaScript mechanism where variables, function declarations and classes are moved to the top of their scope before code execution. Remember that JavaScript only hoists declarations, not hoists initialization.
 
 > [Hoisting in JavaScript with let and const – and How it Differs from var](https://www.freecodecamp.org/news/javascript-let-and-const-hoisting/)
+
+### Class
+
+In ES6, Javascript `Class` are primarily syntactic sugar over JavaScript’s existing prototype-based inheritance. For example, the prototype based inheritance written in function expression as below:
+
+```javascript
+function Bike(model, color) {
+  this.model = model;
+  this.color = color;
+}
+
+Bike.prototype.getDetails = function () {
+  return this.model + ' bike has ' + this.color + ' color';
+};
+
+let bike = new Bike('BMW', 'black');
+console.log(bike.getDetails()); // BMW bike has black color
+```
+
+Whereas ES6 `Class` can be defined as an alternative
+
+```javascript
+class Bike {
+  constructor(model, color) {
+    this.model = model;
+    this.color = color;
+  }
+
+  getDetails() {
+    return this.model + ' bike has ' + this.color + ' color';
+  }
+}
+
+let bike = new Bike('BMW', 'black');
+console.log(bike.getDetails()); // BMW bike has black color
+```
+
+> [JavaScript Info - Classes](https://javascript.info/class)
