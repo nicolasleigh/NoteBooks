@@ -319,3 +319,7 @@ function sayHello() {
   };
 }
 ```
+
+### First order function
+
+A function that doesn't accept another function as an argument and doesn't return a function is called a `first-order function`.
