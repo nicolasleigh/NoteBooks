@@ -481,3 +481,17 @@ console.log(decoded_uri_component); // employee Details?name=john&occupation=man
 ```
 
 > Professional JavaScript for Web Developers 5th - URI-Encoding Methods - P202
+
+### Memoization
+
+`Memoization` is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
+
+```javascript
+function memoize(fn) {
+  const cache = {};
+  return function (...args) {
+    const stringifiedArgs = JSON.stringify(args);
+    return cache[stringifiedArgs] || (cache[stringifiedArgs] = fn(...args));
+  };
+}
+```
