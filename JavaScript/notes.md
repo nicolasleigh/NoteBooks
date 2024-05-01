@@ -366,3 +366,26 @@ let curriedSum = _.curry(sum); // using _.curry from lodash library
 console.log(curriedSum(1, 2)); // 3, still callable normally
 console.log(curriedSum(1)(2)); // 3, called partially
 ```
+
+### Pure function
+
+A function is called `pure` if the return value is only determined by its input values, without any side effects.
+
+```javascript
+//Impure
+let numberArray = [];
+const impureAddNumber = (number) => numberArray.push(number);
+//Pure
+const pureAddNumber = (number) => (argNumberArray) =>
+  argNumberArray.concat([number]);
+
+//Display the results
+console.log(impureAddNumber(6)); // returns 1
+console.log(numberArray); // returns [6]
+console.log(pureAddNumber(7)(numberArray)); // returns [6, 7]
+console.log(numberArray); // returns [6]
+```
+
+the `push` function is impure by altering the array and returning the new `length` of the array, `concat` on the other hand takes the array and concatenates it with the other array producing a whole new array without side effects, and the return value is a new `Array` instance.
+
+Remember that Pure functions are important as they simplify unit testing without any side effects and no need for dependency injection. They also avoid tight coupling and make it harder to break your application by not having any side effects.
