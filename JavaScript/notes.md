@@ -323,3 +323,7 @@ function sayHello() {
 ### First order function
 
 A function that doesn't accept another function as an argument and doesn't return a function is called a `first-order function`.
+
+### Higher order function
+
+A function that accepts another function as an argument or returns a function is called a `higher-order function`.
