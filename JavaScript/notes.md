@@ -495,3 +495,9 @@ function memoize(fn) {
   };
 }
 ```
+
+### Hoisting
+
+`Hoisting` is a JavaScript mechanism where variables, function declarations and classes are moved to the top of their scope before code execution. Remember that JavaScript only hoists declarations, not hoists initialization.
+
+> [Hoisting in JavaScript with let and const – and How it Differs from var](https://www.freecodecamp.org/news/javascript-let-and-const-hoisting/)
