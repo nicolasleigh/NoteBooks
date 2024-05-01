@@ -150,3 +150,13 @@ console.log(myJSON); // {"name":"John","age":30,"city":"New York"}
 
 > Professional JavaScript for Web Developers 5th - JSON - P844
 > [JavaScript Info - JSON](https://javascript.info/json)
+
+### array.slice()
+
+The `slice()` method returns a shallow copy of a portion of an array into a new array object selected from `begin` to `end` (`end` not included) where `begin` and `end` represent the index of items in that array. The original array will not be modified.
+
+```javascript
+const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
+const citrus = fruits.slice(1, 3);
+console.log(citrus); // ['Orange', 'Lemon']
+```
