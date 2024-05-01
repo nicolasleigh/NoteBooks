@@ -458,3 +458,26 @@ An `IIFE` (Immediately Invoked Function Expression) is a JavaScript function tha
   console.log('Hello!');
 })();
 ```
+
+### Encode or decode a URL in JavaScript
+
+`encodeURI()` is used to encode an URL. This function requires a URL string as a parameter and return that encoded string.
+
+`decodeURI()` is used to decode an URL. This function requires an encoded URL string as parameter and return that decoded string.
+
+If you want to encode characters such as `/ ? : @ & = + $ #` then you need to use `encodeURIComponent()`.
+
+```javascript
+let uri = 'employee Details?name=john&occupation=manager';
+let encoded_uri = encodeURI(uri);
+let decoded_uri = decodeURI(encoded_uri);
+let encoded_uri_component = encodeURIComponent(uri);
+let decoded_uri_component = decodeURIComponent(encoded_uri_component);
+
+console.log(encoded_uri); // employee%20Details?name=john&occupation=manager
+console.log(decoded_uri); // employee Details?name=john&occupation=manager
+console.log(encoded_uri_component); // employee%20Details%3Fname%3Djohn%26occupation%3Dmanager
+console.log(decoded_uri_component); // employee Details?name=john&occupation=manager
+```
+
+> Professional JavaScript for Web Developers 5th - URI-Encoding Methods - P202
