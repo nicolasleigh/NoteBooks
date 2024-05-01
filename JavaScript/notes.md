@@ -160,3 +160,22 @@ const fruits = ['Banana', 'Orange', 'Lemon', 'Apple', 'Mango'];
 const citrus = fruits.slice(1, 3);
 console.log(citrus); // ['Orange', 'Lemon']
 ```
+
+### array.splice()
+
+The `splice()` method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. This method modifies the original array and returns the deleted array.
+
+```javascript
+const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+fruits.splice(2, 0, 'Lemon', 'Kiwi');
+console.log(fruits); // ['Banana', 'Orange', 'Lemon', 'Kiwi', 'Apple', 'Mango']
+```
+
+```javascript
+const fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
+const deletedItems = fruits.splice(2);
+console.log(fruits); // ['Banana', 'Orange']
+console.log(deletedItems); // ['Apple', 'Mango']
+```
+
+> [JavaScript Info - Array Methods ](https://javascript.info/array-methods#splice)
