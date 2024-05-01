@@ -179,3 +179,11 @@ console.log(deletedItems); // ['Apple', 'Mango']
 ```
 
 > [JavaScript Info - Array Methods ](https://javascript.info/array-methods#splice)
+
+### The difference between slice and splice
+
+| Slice                                        | Splice                                            |
+| -------------------------------------------- | ------------------------------------------------- |
+| Doesn't modify the original array(immutable) | Modifies the original array(mutable)              |
+| Returns the subset of original array         | Returns the deleted elements as array             |
+| Used to pick the elements from array         | Used to remove/replace/add elements from/to array |
