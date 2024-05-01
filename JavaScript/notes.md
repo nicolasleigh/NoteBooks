@@ -431,3 +431,20 @@ Remember that Pure functions are important as they simplify unit testing without
   let bar = 'Bar 1';
   let bar = 'Bar 2'; // SyntaxError: Identifier 'bar' has already been declared
   ```
+
+### Temporal Dead Zone
+
+The Temporal Dead Zone(TDZ) is a specific period or area of a block where a variable is inaccessible until it has been initialized with a value. This behavior in JavaScript that occurs when declaring a variable with the `let` and `const` keywords, but not with `var`. In ES6, accessing a `let` or `const` variable before its declaration (within its scope) causes a `ReferenceError`.
+
+```javascript
+function someMethod() {
+  console.log(counter1); // undefined
+  console.log(counter2); // ReferenceError: Cannot access 'counter2' before initialization
+  console.log(counter3); // ReferenceError: Cannot access 'counter3' before initialization
+  var counter1 = 1;
+  let counter2 = 2;
+  const counter3 = 3;
+}
+```
+
+> [Hoisting in JavaScript with let and const – and How it Differs from var](https://www.freecodecamp.org/news/javascript-let-and-const-hoisting/)
