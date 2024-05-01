@@ -327,3 +327,7 @@ A function that doesn't accept another function as an argument and doesn't retur
 ### Higher order function
 
 A function that accepts another function as an argument or returns a function is called a `higher-order function`.
+
+### Unary function
+
+A function that accepts exactly one argument is called a `unary function`.
