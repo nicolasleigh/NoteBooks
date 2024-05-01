@@ -81,3 +81,13 @@ let obj = new (function () {
   this.age = 25;
 })();
 ```
+
+### prototype chain
+
+Prototype chain is a mechanism in JavaScript that allows objects to inherit properties and methods from other objects.
+
+In JavaScript, each object has a private property which holds a link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. By definition, null has no prototype, and acts as the final link in this prototype chain.
+
+The prototype on object instance is available through **Object.getPrototypeOf(obj)** or **obj.\_\_proto\_\_**
+
+> Professional JavaScript for Web Developers 5th - Prototype Inheritance - P347
