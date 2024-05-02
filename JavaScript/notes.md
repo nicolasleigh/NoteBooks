@@ -575,3 +575,13 @@ The inner function has access to the variables in the outer function scope even 
 > [JavaScript Info - Modules](https://javascript.info/modules-intro)
 
 > Professional JavaScript for Web Developers 5th - Modules - P913
+
+### Scope
+
+`Scope` is the context in which a variable is declared. In JavaScript, variables can be declared either inside or outside of functions. The scope of a variable determines where the variable can be accessed.
+
+- **Global Scope**: Variables declared outside of any function are in the global scope. They can be accessed from any function in the program.
+- **Function Scope**: Variables declared inside a function are in the function scope. They can only be accessed from within that function.
+- **Block Scope**: Variables declared with `let` and `const` are block-scoped. They can only be accessed within the block they are declared in.
+
+> Professional JavaScript for Web Developers 5th - EXECUTION CONTEXT AND SCOPE - P154
