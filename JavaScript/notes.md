@@ -608,3 +608,13 @@ In addition to their caching and push notification capabilities, `service worker
 
 - **Local Storage**: Data stored in `local storage` persists even after the browser is closed and reopened. It is stored without an expiration date and must be manually cleared.
 - **Session Storage**: Data stored in `session storage` is lost when the browser tab is closed.
+
+### Cross-document messaging (XDM)
+
+`Cross-document messaging` (XDM) is a method of communication between documents from different origins. It allows scripts to access objects in a different document, even if the document is in a different domain. This is useful for web applications that need to communicate with `iframes`, pop-up windows, or other documents that are not in the same domain.
+
+At the heart of XDM is the `postMessage()` method. The `postMessage()` method accepts three arguments: a message, a string indicating the intended recipient origin, and an optional array of transferable objects (only relevant to `web workers`). It is possible to allow posting to any origin by passing in "`*`" as the second argument to `postMessage()`, but this is not recommended.
+
+> Professional JavaScript for Web Developers 5th - CROSS-CONTEXT MESSAGING - P739
+
+> [JavaScript Info - Cross-window communication](https://javascript.info/cross-window-communication)
