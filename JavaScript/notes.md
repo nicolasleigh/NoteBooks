@@ -601,3 +601,10 @@ In addition to their caching and push notification capabilities, `service worker
 > Professional JavaScript for Web Developers 5th - INDEXEDDB - P899
 
 > [JavaScript Info - IndexedDB](https://javascript.info/indexeddb)
+
+### Web storage
+
+`Web storage` is an API that provides a mechanism by which browsers can store key/value pairs locally within the user's browser, in a much more intuitive fashion than using `cookies`. The `web storage` provides two mechanisms for storing data on the client:
+
+- **Local Storage**: Data stored in `local storage` persists even after the browser is closed and reopened. It is stored without an expiration date and must be manually cleared.
+- **Session Storage**: Data stored in `session storage` is lost when the browser tab is closed.
