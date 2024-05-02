@@ -707,3 +707,28 @@ eventSource.addEventListener('message', (event) => {
 > Professional JavaScript for Web Developers 5th - THE EVENTSOURCE API - P888
 
 > [JavaScript Info - Server-sent events](https://javascript.info/server-sent-events)
+
+### Promise Chaining
+
+`Promise chaining` is a technique used to chain multiple asynchronous operations together using `promises`. This allows you to perform a series of asynchronous operations in sequence, passing the result of one operation to the next operation in the chain. `Callback hell` is a common problem when working with asynchronous code, and `promise chaining` is a way to avoid this problem.
+
+```javascript
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(1);
+  }, 1000);
+});
+
+promise
+  .then((result) => {
+    console.log(result); // 1
+    return result * 2;
+  })
+  .then((result) => {
+    console.log(result); // 2
+    return result * 2;
+  })
+  .then((result) => {
+    console.log(result); // 4
+  });
+```
