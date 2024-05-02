@@ -563,3 +563,15 @@ The inner function has access to the variables in the outer function scope even 
 > Professional JavaScript for Web Developers 5th - Closures - P428
 
 > [JavaScript Info - Closure](https://javascript.info/closure)
+
+### Modules
+
+`Modules` refer to small units of independent, reusable code and also act as the foundation of many JavaScript design patterns. Most of the JavaScript modules export an object literal, a function, or a constructor. `Modules` are particularly useful for a number of reasons:
+
+- **Maintainability**: Modules allow you to keep related code together and organized.
+- **Namespacing**: Modules allow you to avoid naming collisions.
+- **Reusability**: Modules allow you to write code once and use it in multiple places.
+
+> [JavaScript Info - Modules](https://javascript.info/modules-intro)
+
+> Professional JavaScript for Web Developers 5th - Modules - P913
