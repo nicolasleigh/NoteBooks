@@ -782,3 +782,13 @@ console.log(b + 2); // NaN
 | ------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | These variables do not exist in a program and are not declared                              | These variables declared in the program but have not assigned any value                |
 | If you try to read the value of an undeclared variable, then a runtime error is encountered | If you try to read the value of an undefined variable, an undefined value is returned. |
+
+### Event flow
+
+`Event flow` is the order in which events are received by the various elements in a web page. There are three phases of event flow:
+
+- **Capturing phase**: The event is captured by the outermost element and propagated to the inner elements.
+
+- **Target phase**: The event reaches the target element.
+
+- **Bubbling phase**: The event bubbles up from the target element to the outermost element.
