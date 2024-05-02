@@ -593,3 +593,11 @@ The inner function has access to the variables in the outer function scope even 
 In addition to their caching and push notification capabilities, `service workers` can act as a highly customizable network cache. They can cache resources such as HTML, CSS, JavaScript, and images, allowing web applications to load quickly even when there is no network connection. This means that users can continue using the application even when they are offline or have a poor Internet connection, providing a smoother and more reliable user experience.
 
 > Professional JavaScript for Web Developers 5th - SERVICE WORKERS - P973
+
+### IndexedDB
+
+`IndexedDB` is a structured data storage mechanism similar to an SQL database. Instead of storing data in `tables`, data is stored in `object stores`. `Object stores` are created by defining a key and then adding data. `Cursors` are used to query `object stores` for particular pieces of data, and `indexes` may be created for faster lookups on particular properties.
+
+> Professional JavaScript for Web Developers 5th - INDEXEDDB - P899
+
+> [JavaScript Info - IndexedDB](https://javascript.info/indexeddb)
