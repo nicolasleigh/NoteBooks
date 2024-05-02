@@ -832,3 +832,28 @@ window.addEventListener('load', (event) => {
 
 - It makes little complex code
 - You need to load a `polyfill` if ES6 is not supported
+
+### The difference between an attribute and a property
+
+- **Attribute**: `Attributes` are defined on the `HTML` tag and are used to set initial values. They are defined in the `HTML` and are always `strings`.
+
+- **Property**: `Properties` are defined on the `DOM` object and are used to get or set the current values. They are defined in the `DOM` and can be of any type.
+
+```html
+<input type="text" id="input" value="Hello" />
+```
+
+```javascript
+const input = document.getElementById('input');
+
+console.log(input.getAttribute('value')); // Hello
+console.log(input.value); // Hello
+
+input.setAttribute('value', 'World');
+
+console.log(input.getAttribute('value')); // World
+
+input.value = 'World';
+
+console.log(input.value); // World
+```
