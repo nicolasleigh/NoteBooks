@@ -585,3 +585,11 @@ The inner function has access to the variables in the outer function scope even 
 - **Block Scope**: Variables declared with `let` and `const` are block-scoped. They can only be accessed within the block they are declared in.
 
 > Professional JavaScript for Web Developers 5th - EXECUTION CONTEXT AND SCOPE - P154
+
+### Service worker
+
+`Service workers` are a separate type of `worker` that are designed to enable advanced web application features such as `offline functionality`, `push notifications`, and `background syncing`. They behave more like a network proxy than a separate browser thread, allowing them to intercept network requests and cache resources. This enables web applications to function even when there is no Internet connection, providing a more consistent and reliable user experience. `Service workers` can also enable `push notifications` for progressive web applications, allowing web applications to keep users engaged even when they are not actively using the application.
+
+In addition to their caching and push notification capabilities, `service workers` can act as a highly customizable network cache. They can cache resources such as HTML, CSS, JavaScript, and images, allowing web applications to load quickly even when there is no network connection. This means that users can continue using the application even when they are offline or have a poor Internet connection, providing a smoother and more reliable user experience.
+
+> Professional JavaScript for Web Developers 5th - SERVICE WORKERS - P973
