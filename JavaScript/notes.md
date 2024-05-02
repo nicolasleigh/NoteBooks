@@ -758,3 +758,20 @@ promise
 - An `octal literal` is considered invalid syntax in strict mode.
 
 > Professional JavaScript for Web Developers 5th - STRICT MODE - P1043
+
+### The difference between null and undefined
+
+| Null                                                                                                               | Undefined                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------- |
+| `null` is an assignment value. It can be assigned to a variable which indicates that variable points to no object. | `undefined` means a variable has been declared but has not yet been assigned a value.          |
+| Type of `null` is object                                                                                           | Type of `undefined` is undefined                                                               |
+| The `null` value is a primitive value that represents the null, empty, or non-existent reference.                  | The `undefined` value is a primitive value used when a variable has not been assigned a value. |
+| Converted to `0` while performing primitive operations                                                             | Converted to `NaN` while performing primitive operations                                       |
+
+```javascript
+let a = null;
+let b = undefined;
+
+console.log(a + 2); // 2
+console.log(b + 2); // NaN
+```
