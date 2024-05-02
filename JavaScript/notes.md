@@ -732,3 +732,29 @@ promise
     console.log(result); // 4
   });
 ```
+
+> Professional JavaScript for Web Developers 5th - Promise Chaining - P455
+
+### Strict mode
+
+`Strict mode` can be enabled by adding the string `"use strict";` at the beginning of a script or function.
+
+- All code defined inside classes and modules by default is in strict mode.
+
+- Disallows accidental creation of global variables.
+
+- To call `delete` on a variable will throw an error.
+
+- Disallows variables named `implements`, `interface`, `let`, `package`, `private`, `protected`, `public`, `static`, `yield`, `eval`, `arguments`.
+
+- In `non-strict mode`, changes to a named argument are also reflected in the arguments object, whereas `strict mode` ensures that each are completely separate.
+
+- Disallows the use of `with` statement.
+
+- Disallows function `declarations` unless they are at the top level of a script or function. That means functions declared, for instance, in an if statement are now a syntax error.
+
+- `arguments.callee` and `arguments.caller` are not allowed.
+
+- An `octal literal` is considered invalid syntax in strict mode.
+
+> Professional JavaScript for Web Developers 5th - STRICT MODE - P1043
