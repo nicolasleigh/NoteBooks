@@ -539,3 +539,27 @@ console.log(bike.getDetails()); // BMW bike has black color
 ```
 
 > [JavaScript Info - Classes](https://javascript.info/class)
+
+### Closure
+
+`Closures` are functions that have access to variables from another function’s scope. This is often accomplished by creating a function inside a function
+
+```javascript
+function outerFunction(outerVariable) {
+  return function innerFunction(innerVariable) {
+    console.log('Outer Variable: ' + outerVariable);
+    console.log('Inner Variable: ' + innerVariable);
+  };
+}
+
+const newFunction = outerFunction('outside');
+newFunction('inside');
+// Outer Variable: outside
+// Inner Variable: inside
+```
+
+The inner function has access to the variables in the outer function scope even after the outer function has returned.
+
+> Professional JavaScript for Web Developers 5th - Closures - P428
+
+> [JavaScript Info - Closure](https://javascript.info/closure)
