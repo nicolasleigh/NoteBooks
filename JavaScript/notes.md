@@ -618,3 +618,11 @@ At the heart of XDM is the `postMessage()` method. The `postMessage()` method ac
 > Professional JavaScript for Web Developers 5th - CROSS-CONTEXT MESSAGING - P739
 
 > [JavaScript Info - Cross-window communication](https://javascript.info/cross-window-communication)
+
+### Cookie
+
+`Cookies` are small pieces of data that are stored on the client-side by the browser. They are used to store information about the user, such as login credentials, shopping cart items, and user preferences. `Cookies` are sent to the server with each request, allowing the server to identify the user and provide a personalized experience.
+
+> Professional JavaScript for Web Developers 5th - COOKIES - P891
+
+> [JavaScript Info - Cookies, document.cookie](https://javascript.info/cookie)
