@@ -626,3 +626,15 @@ At the heart of XDM is the `postMessage()` method. The `postMessage()` method ac
 > Professional JavaScript for Web Developers 5th - COOKIES - P891
 
 > [JavaScript Info - Cookies, document.cookie](https://javascript.info/cookie)
+
+### The differences between cookie, local storage and session storage
+
+| Cookie                                                                  | Local Storage                                           | Session Storage                                                                                  |
+| ----------------------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| Cookies are primarily for reading server-side.                          | Local storage can only be read client-side.             | Session storage is only available per window (or tab in browsers like Chrome and Firefox).       |
+| Cookies can be made secure by setting the HttpOnly flag for the cookie. | Local storage has no such feature.                      | Session storage has no such feature.                                                             |
+| Cookies are sent with every HTTP request.                               | Local storage is not sent with every HTTP request.      | Session storage is not sent with every HTTP request.                                             |
+| Cookies are limited to about 4 KB of data.                              | Local storage is limited to about 5 MB of data.         | Session storage is limited to about 5 MB of data.                                                |
+| Cookies can be accessed on both the client and server side.             | Local storage can only be accessed on the client side.  | Session storage can only be accessed on the client side.                                         |
+| Cookies can be set to expire after a certain amount of time.            | Local storage does not expire.                          | Session storage expires when the tab or browser is closed.                                       |
+| Cookies can be used for tracking user behavior.                         | Local storage can be used for storing user preferences. | Session storage can be used for storing temporary data that is only needed for a single session. |
