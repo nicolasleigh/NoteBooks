@@ -689,3 +689,21 @@ fetchData((data) => {
   console.log(data); // Data fetched!
 });
 ```
+
+### Server-sent events (SSE)
+
+`Server-sent events` (SSE) is a technology that allows a server to push data to a web page over a single, long-lived connection. With `SSE`, a server can send data to a client without the client having to request it. This is useful for applications that require real-time updates, such as news feeds, stock price updates, and chat applications.
+
+To use `SSE`, the server sends a `Content-Type` header with the value `text/event-stream` and a `data` field with the data to be sent. The client can then listen for `message` events on the `EventSource` object to receive the data.
+
+```javascript
+const eventSource = new EventSource('/events');
+
+eventSource.addEventListener('message', (event) => {
+  console.log(event.data);
+});
+```
+
+> Professional JavaScript for Web Developers 5th - THE EVENTSOURCE API - P888
+
+> [JavaScript Info - Server-sent events](https://javascript.info/server-sent-events)
