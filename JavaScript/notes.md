@@ -810,3 +810,11 @@ window.addEventListener('load', (event) => {
 ```
 
 > Professional JavaScript for Web Developers 5th - The load Event | The DOMContentLoaded Event - P622 | P638
+
+### The difference between native, host and user objects
+
+- **Native objects**: `Native objects` are objects that are built into the JavaScript language, such as `String`, `Number`, `Array`, `Object`, and `Function`.
+
+- **Host objects**: `Host objects` are objects that are provided by the environment in which JavaScript is running, such as the `window` object in a browser or the `document` object in the DOM.
+
+- **User objects**: `User objects` are objects that are created by the user in JavaScript code.
