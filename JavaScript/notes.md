@@ -638,3 +638,17 @@ At the heart of XDM is the `postMessage()` method. The `postMessage()` method ac
 | Cookies can be accessed on both the client and server side.             | Local storage can only be accessed on the client side.  | Session storage can only be accessed on the client side.                                         |
 | Cookies can be set to expire after a certain amount of time.            | Local storage does not expire.                          | Session storage expires when the tab or browser is closed.                                       |
 | Cookies can be used for tracking user behavior.                         | Local storage can be used for storing user preferences. | Session storage can be used for storing temporary data that is only needed for a single session. |
+
+### Web worker
+
+`Web workers` are a type of JavaScript worker that runs in the background, independently of other scripts, without affecting the performance of the page. They are used to perform tasks that are computationally expensive or time-consuming, such as processing large amounts of data, without blocking the main thread. `Web workers` run in a separate thread from the main thread, allowing them to run concurrently with other scripts.
+
+There are three primary types of workers defined in the Web Worker specification: the `dedicated web worker`, the `shared web worker`, and the `service worker`.
+
+The `dedicated web worker` runs in a separate thread from the main thread and is dedicated to a single script.
+
+The `shared web worker` runs in a separate thread from the main thread and can be shared by multiple scripts.
+
+The `service worker` is a type of web worker that runs in the background and is used to enable advanced web application features such as offline functionality, push notifications, and background syncing.
+
+> Professional JavaScript for Web Developers 5th - WORKERS - P939
