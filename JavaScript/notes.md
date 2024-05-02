@@ -652,3 +652,23 @@ The `shared web worker` runs in a separate thread from the main thread and can b
 The `service worker` is a type of web worker that runs in the background and is used to enable advanced web application features such as offline functionality, push notifications, and background syncing.
 
 > Professional JavaScript for Web Developers 5th - WORKERS - P939
+
+### Promise
+
+A `promise` is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). It will be in one of the 3 possible states: `fulfilled`, `rejected`, or `pending`.
+
+```javascript
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('Success!');
+  }, 1000);
+});
+
+promise.then((value) => {
+  console.log(value); // Success!
+});
+```
+
+> Professional JavaScript for Web Developers 5th - PROMISES - P439
+
+> [JavaScript Info - Promise](https://javascript.info/promise-basics)
