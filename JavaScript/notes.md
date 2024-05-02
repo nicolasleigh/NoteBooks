@@ -672,3 +672,20 @@ promise.then((value) => {
 > Professional JavaScript for Web Developers 5th - PROMISES - P439
 
 > [JavaScript Info - Promise](https://javascript.info/promise-basics)
+
+### Callback function
+
+A `callback function` is a function that is passed as an argument to another function and is executed after some operation has been completed. `Callback functions` are often used to handle asynchronous operations, such as fetching data from a server or reading a file.
+
+```javascript
+function fetchData(callback) {
+  setTimeout(() => {
+    const data = 'Data fetched!';
+    callback(data);
+  }, 1000);
+}
+
+fetchData((data) => {
+  console.log(data); // Data fetched!
+});
+```
