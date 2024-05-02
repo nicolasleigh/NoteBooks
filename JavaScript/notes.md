@@ -792,3 +792,21 @@ console.log(b + 2); // NaN
 - **Target phase**: The event reaches the target element.
 
 - **Bubbling phase**: The event bubbles up from the target element to the outermost element.
+
+### The difference between document load and DOMContentLoaded events
+
+- **DOMContentLoaded**: The `DOMContentLoaded` event is fired when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
+
+- **Load**: The `load` event is fired when the entire page has finished loading, including all stylesheets, images, and subframes.
+
+```javascript
+document.addEventListener('DOMContentLoaded', (event) => {
+  console.log('DOM fully loaded and parsed');
+});
+
+window.addEventListener('load', (event) => {
+  console.log('Page fully loaded');
+});
+```
+
+> Professional JavaScript for Web Developers 5th - The load Event | The DOMContentLoaded Event - P622 | P638
