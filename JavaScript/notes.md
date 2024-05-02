@@ -818,3 +818,17 @@ window.addEventListener('load', (event) => {
 - **Host objects**: `Host objects` are objects that are provided by the environment in which JavaScript is running, such as the `window` object in a browser or the `document` object in the DOM.
 
 - **User objects**: `User objects` are objects that are created by the user in JavaScript code.
+
+### The pros and cons of promises over callbacks
+
+**Pros**:
+
+- It avoids `callback hell` which is unreadable
+- Easy to write sequential `asynchronous` code with `.then()`
+- Easy to write parallel `asynchronous` code with `Promise.all()`
+- Solves some of the common problems of callbacks(call the callback too late, too early, many times and swallow errors/exceptions)
+
+**Cons**:
+
+- It makes little complex code
+- You need to load a `polyfill` if ES6 is not supported
