@@ -857,3 +857,7 @@ input.value = 'World';
 
 console.log(input.value); // World
 ```
+
+### same-origin policy
+
+The `same-origin policy` is a security feature implemented in web browsers that restricts how a document or script loaded from one origin can interact with a resource from another origin. The `same-origin policy` prevents a malicious script on one page from accessing sensitive data on another page.
