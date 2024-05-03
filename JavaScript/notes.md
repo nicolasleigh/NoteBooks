@@ -861,3 +861,7 @@ console.log(input.value); // World
 ### same-origin policy
 
 The `same-origin policy` is a security feature implemented in web browsers that restricts how a document or script loaded from one origin can interact with a resource from another origin. The `same-origin policy` prevents a malicious script on one page from accessing sensitive data on another page.
+
+### Is JavaScript a compiled or interpreted language
+
+`JavaScript` is an interpreted language, not a compiled language. An interpreter in the browser reads over the `JavaScript` code, interprets each line, and runs it. Nowadays modern browsers use a technology known as Just-In-Time (JIT) compilation, which compiles `JavaScript` to executable bytecode just as it is about to run.
