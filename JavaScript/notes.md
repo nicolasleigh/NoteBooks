@@ -939,3 +939,10 @@ function sum() {
 
 console.log(sum(1, 2, 3, 4, 5)); // 15
 ```
+
+### Make the first letter of a string in an uppercase
+
+```javascript
+const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
+console.log(capitalize('hello')); // Hello
+```
