@@ -946,3 +946,12 @@ console.log(sum(1, 2, 3, 4, 5)); // 15
 const capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 console.log(capitalize('hello')); // Hello
 ```
+
+### polyfill
+
+A `polyfill` is a piece of code that provides the technology that you, the developer, expect the browser to provide natively. Most often, this is used to implement the missing functionality in browsers that don't have native support for it.
+
+There are two main `polyfill` libraries available,
+
+- **Core.js**: It is a modular javascript library used for cutting-edge ECMAScript features.
+- **Polyfill.io**: It provides `polyfills` that are required for browser needs.
