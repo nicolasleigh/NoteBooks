@@ -881,3 +881,9 @@ The `same-origin policy` is a security feature implemented in web browsers that 
 - `onkeydown`: The user pushes a keyboard key
 
 - `onload`: The browser has finished loading the page
+
+### The Browser Object Model (BOM)
+
+The `Browser Object Model` (BOM) is a set of objects exposed by the browser that allow JavaScript to interact with the browser. The `BOM` includes objects such as `window`, `location`, `history`, `screen`, and `navigator`. The Browser Object Model is not standardized and can change based on different browsers.
+
+> Professional JavaScript for Web Developers 5th - THE BROWSER OBJECT MODEL - P487
