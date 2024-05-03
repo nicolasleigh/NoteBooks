@@ -923,3 +923,19 @@ document.getElementById('list').addEventListener('click', (event) => {
 `PWAs` use features such as `service workers`, `web app manifests`, and `push notifications` to provide a more app-like experience on the web. They are designed to work offline, load quickly, and provide a smooth user experience, making them ideal for mobile devices and low-bandwidth connections.
 
 > [What is a PWA? Progressive Web Apps for Beginners](https://www.freecodecamp.org/news/what-are-progressive-web-apps/)
+
+### The arguments object
+
+The `arguments` object is an array-like object that contains all the arguments passed to a function. It is not an array, but it has a `length` property and can be accessed like an array. The `arguments` object is useful when you want to create a function that can accept a variable number of arguments.
+
+```javascript
+function sum() {
+  let total = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    total += arguments[i];
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3, 4, 5)); // 15
+```
