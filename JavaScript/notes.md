@@ -865,3 +865,19 @@ The `same-origin policy` is a security feature implemented in web browsers that 
 ### Is JavaScript a compiled or interpreted language
 
 `JavaScript` is an interpreted language, not a compiled language. An interpreter in the browser reads over the `JavaScript` code, interprets each line, and runs it. Nowadays modern browsers use a technology known as Just-In-Time (JIT) compilation, which compiles `JavaScript` to executable bytecode just as it is about to run.
+
+### Events
+
+`Events` are "things" that happen to HTML elements. When JavaScript is used in HTML pages, JavaScript can react on these events. Some of the examples of HTML events are:
+
+- `onchange`: An HTML element has been changed
+
+- `onclick`: The user clicks an HTML element
+
+- `onmouseover`: The user moves the mouse over an HTML element
+
+- `onmouseout`: The user moves the mouse away from an HTML element
+
+- `onkeydown`: The user pushes a keyboard key
+
+- `onload`: The browser has finished loading the page
