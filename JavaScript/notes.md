@@ -915,3 +915,11 @@ document.getElementById('list').addEventListener('click', (event) => {
 ```
 
 > Professional JavaScript for Web Developers 5th - Event Delegation - P650
+
+### Progressive web applications (PWAs)
+
+`Progressive web applications` (PWAs) are web applications that are designed to provide a native app-like experience on the web. They are built using web technologies such as `HTML`, `CSS`, and `JavaScript`, and are designed to work on any platform that uses a standards-compliant browser. `PWAs` are designed to be fast, reliable, and engaging, and can be installed on a user's device just like a native app.
+
+`PWAs` use features such as `service workers`, `web app manifests`, and `push notifications` to provide a more app-like experience on the web. They are designed to work offline, load quickly, and provide a smooth user experience, making them ideal for mobile devices and low-bandwidth connections.
+
+> [What is a PWA? Progressive Web Apps for Beginners](https://www.freecodecamp.org/news/what-are-progressive-web-apps/)
