@@ -893,3 +893,25 @@ The `Browser Object Model` (BOM) is a set of objects exposed by the browser that
 `JavaScript` is a `single-threaded` language, meaning it can execute only one task at a time. `JavaScript` is `single-threaded` because it is designed to run in the browser, which is `single-threaded` by nature. The browser has a single main thread that is responsible for executing `JavaScript`, rendering the page, and handling user input. While this may seem like a limitation to `JavaScript`, there are several ways to work around its limitations using `asynchronous programming` and `web workers`.
 
 > [Why JavaScript is Single Threaded?](https://groovetechnology.com/blog/why-javascript-is-single-threaded/)
+
+### Event delegation
+
+`Event delegation` is a technique in which you attach a single `event listener` to a parent element that will fire for all descendants matching a selector, whether they are present now or added in the future. This is useful when you have a large number of elements that need the same `event listener`, as it reduces the number of `event listeners` needed and can improve performance.
+
+```html
+<ul id="list">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+```
+
+```javascript
+document.getElementById('list').addEventListener('click', (event) => {
+  if (event.target.tagName === 'LI') {
+    console.log(event.target.textContent);
+  }
+});
+```
+
+> Professional JavaScript for Web Developers 5th - Event Delegation - P650
