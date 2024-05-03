@@ -887,3 +887,9 @@ The `same-origin policy` is a security feature implemented in web browsers that 
 The `Browser Object Model` (BOM) is a set of objects exposed by the browser that allow JavaScript to interact with the browser. The `BOM` includes objects such as `window`, `location`, `history`, `screen`, and `navigator`. The Browser Object Model is not standardized and can change based on different browsers.
 
 > Professional JavaScript for Web Developers 5th - THE BROWSER OBJECT MODEL - P487
+
+### Why is JavaScript treated as Single threaded
+
+`JavaScript` is a `single-threaded` language, meaning it can execute only one task at a time. `JavaScript` is `single-threaded` because it is designed to run in the browser, which is `single-threaded` by nature. The browser has a single main thread that is responsible for executing `JavaScript`, rendering the page, and handling user input. While this may seem like a limitation to `JavaScript`, there are several ways to work around its limitations using `asynchronous programming` and `web workers`.
+
+> [Why JavaScript is Single Threaded?](https://groovetechnology.com/blog/why-javascript-is-single-threaded/)
