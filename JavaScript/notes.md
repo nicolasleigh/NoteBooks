@@ -955,3 +955,10 @@ There are two main `polyfill` libraries available,
 
 - **Core.js**: It is a modular javascript library used for cutting-edge ECMAScript features.
 - **Polyfill.io**: It provides `polyfills` that are required for browser needs.
+
+### The difference between \_\_proto\_\_ and prototype
+
+| proto                                                      | prototype                                                    |
+| ---------------------------------------------------------- | ------------------------------------------------------------ |
+| All the objects have \_\_proto\_\_ property                | All the function constructors have prototype properties.     |
+| Used in lookup chain to resolve methods, constructors etc. | Used to reduce memory wastage with a single copy of function |
