@@ -1011,3 +1011,23 @@ console.log(weakMap.get(key)); // undefined
 | A `WeakMap` is not iterable.                                                            | A `Map` is iterable.                                               |
 | A `WeakMap` does not have a `size` property.                                            | A `Map` has a `size` property that returns the number of elements. |
 | A `WeakMap` can only store objects as keys                                              | A `Map` can store any key type                                     |
+
+### JavaScript accessors
+
+`Accessors` are used to define properties in an object. They are used to get and set the values of an object's properties. `Accessors` are defined using the `get` and `set` keywords.
+
+```javascript
+let obj = {
+  _name: 'John',
+  get name() {
+    return this._name;
+  },
+  set name(value) {
+    this._name = value;
+  },
+};
+
+console.log(obj.name); // John
+obj.name = 'Jane';
+console.log(obj.name); // Jane
+```
