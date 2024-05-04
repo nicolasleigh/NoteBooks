@@ -1031,3 +1031,30 @@ console.log(obj.name); // John
 obj.name = 'Jane';
 console.log(obj.name); // Jane
 ```
+
+### Define property on Object constructor
+
+```javascript
+const object1 = {};
+
+Object.defineProperty(object1, 'property1', {
+  value: 42,
+  writable: false,
+});
+
+object1.property1 = 77;
+// Throws an error in strict mode
+
+console.log(object1.property1);
+// Expected output: 42
+```
+
+`Object.defineProperty()` third argument is an object that can have the following properties:
+
+- **value**: The value of the property.
+
+- **writable**: If `true`, the value of the property can be changed. Default is `false`.
+
+- **enumerable**: If `true`, the property is listed during `for...in` enumeration. Default is `false`.
+
+- **configurable**: If `true`, the property can be deleted and the property attributes can be changed. Default is `false`.
