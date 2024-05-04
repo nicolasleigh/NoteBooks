@@ -977,3 +977,12 @@ console.log(weakSet.has(obj)); // true
 obj = null;
 console.log(weakSet.has(obj)); // false
 ```
+
+### The differences between WeakSet and Set
+
+| WeakSet                                                                       | Set                                                                |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| A `WeakSet` is a collection of objects that allows only objects to be stored. | A `Set` is a collection of unique values of any type.              |
+| A `WeakSet` only holds weak references to the objects stored in it.           | A `Set` holds strong references to the values stored in it.        |
+| A `WeakSet` is not iterable.                                                  | A `Set` is iterable.                                               |
+| A `WeakSet` does not have a `size` property.                                  | A `Set` has a `size` property that returns the number of elements. |
