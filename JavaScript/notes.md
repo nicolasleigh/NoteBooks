@@ -962,3 +962,18 @@ There are two main `polyfill` libraries available,
 | ---------------------------------------------------------- | ------------------------------------------------------------ |
 | All the objects have \_\_proto\_\_ property                | All the function constructors have prototype properties.     |
 | Used in lookup chain to resolve methods, constructors etc. | Used to reduce memory wastage with a single copy of function |
+
+### WeakSet
+
+A `WeakSet` is a collection of objects that allows only objects to be stored and prevents memory leaks. A `WeakSet` is similar to a `Set`, but it only holds weak references to the objects stored in it. This means that if an object is no longer referenced anywhere else in the program, it can be garbage collected even if it is still in the `WeakSet`.
+
+```javascript
+let weakSet = new WeakSet();
+let obj = {};
+
+weakSet.add(obj);
+console.log(weakSet.has(obj)); // true
+
+obj = null;
+console.log(weakSet.has(obj)); // false
+```
