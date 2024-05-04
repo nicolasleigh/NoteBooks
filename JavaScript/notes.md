@@ -1001,3 +1001,13 @@ console.log(weakMap.get(key)); // value
 key = null;
 console.log(weakMap.get(key)); // undefined
 ```
+
+### The differences between WeakMap and Map
+
+| WeakMap                                                                                 | Map                                                                |
+| --------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| A `WeakMap` is a collection of key/value pairs in which the keys are weakly referenced. | A `Map` is a collection of key/value pairs.                        |
+| A `WeakMap` only holds weak references to the keys stored in it.                        | A `Map` holds strong references to the keys stored in it.          |
+| A `WeakMap` is not iterable.                                                            | A `Map` is iterable.                                               |
+| A `WeakMap` does not have a `size` property.                                            | A `Map` has a `size` property that returns the number of elements. |
+| A `WeakMap` can only store objects as keys                                              | A `Map` can store any key type                                     |
