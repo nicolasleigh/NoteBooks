@@ -104,3 +104,17 @@ So, for a table to be in 3NF, it must:
 - **Relational databases** are based on the relational model of data, which organizes data into one or more tables (or “relations”) of columns and rows. Each table has a schema that describes the columns, and each row in the table has a value for each column. The schema defines the tables, the fields in each table, and the relationships between fields and tables.
 
 - **Document databases** are a type of NoSQL database that use a denormalized data model, which is designed to store, query, and retrieve data as JSON-like documents. Each document is a collection of key-value pairs, and each key is a field in the document. Document databases are designed to store and manage collections of JSON-like documents.
+
+---
+
+### Schemaless database
+
+Schemaless databases mean there is no predefined schema the data must conform to before it’s added to the database. As a result, you don’t need to know the structure of your data, enabling you to store all your data easily and quickly.
+
+Document databases are sometimes called schemaless, but that’s misleading, as the code that reads the data usually assumes some kind of structure—i.e., there is an implicit schema, but it is not enforced by the database.
+
+A more accurate term is schema-on-read (the structure of the data is implicit, and only interpreted when the data is read), in contrast with schema-on-write (the traditional approach of relational databases, where the schema is explicit and the database ensures all written data con‐forms to it).
+
+> [What is a Schemaless Database?](https://www.mongodb.com/resources/basics/unstructured-data/schemaless)
+
+> DDIA - P61
