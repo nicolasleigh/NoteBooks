@@ -39,3 +39,19 @@ In practice, in a system handling a variety of requests, the response time can v
 2. Simplicity: Make it easy for new engineers to understand the system, by removing as much complexity as possible from the system. (Note this is not the same as simplicity of the user interface.)
 
 3. Evolvability: Make it easy for engineers to make changes to the system in the future, adapting it for unanticipated use cases as requirements change. Also known as extensibility, modifiability, or plasticity.
+
+# Data Models and Query Languages
+
+## The Object-Relational Mismatch
+
+### impedance mismatch
+
+Impedance mismatch is the term used to refer to the problems that occurs due to differences between the database model and the programming language model.
+
+To address the impedance mismatch problem, developers often use object-relational mapping (ORM) tools or other middleware solutions that provide a bridge between the OOP model and the relational model. These tools can automate the mapping process, allowing developers to work with objects in code while transparently interacting with the underlying database.
+
+Object-relational mapping (ORM) frameworks like ActiveRecord and Hibernate have been developed to bridge the gap between the object-oriented and relational worlds. These frameworks provide a layer of abstraction that allows developers to work with objects in their code, while the ORM library translates that to the appropriate SQL queries to fetch or store those objects in the database.
+
+> [Impedance Mismatch in DBMS](https://www.geeksforgeeks.org/impedance-mismatch-in-dbms/)
+
+> DDIA - P52
