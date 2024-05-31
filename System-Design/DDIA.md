@@ -118,3 +118,17 @@ A more accurate term is schema-on-read (the structure of the data is implicit, a
 > [What is a Schemaless Database?](https://www.mongodb.com/resources/basics/unstructured-data/schemaless)
 
 > DDIA - P61
+
+---
+
+## Query Languages for Data
+
+### Declarative query language vs. imperative language
+
+Imperative query languages are used to describe how you want something done specifically. This is accomplished with explicit control in a detailed, step-by step manner; the sequence and wording of each line of code plays a critical role. Some well-known general imperative programming languages include Python, C and Java.
+
+Declarative query languages let users express what data to retrieve, letting the engine underneath take care of seamlessly retrieving it. They function in a more general manner and involve giving broad instructions about what task is to be completed, rather than the specifics on how to complete it. They deal with the results rather than the process, focusing less on the finer details of each task. Some well-known general declarative programming languages include Ruby, R and Haskell. SQL is a declarative query language and is the industry standard for relational databases.
+
+> [Imperative vs. Declarative Query Languages: What’s the Difference?](https://neo4j.com/blog/imperative-vs-declarative-query-languages/)
+
+> DDIA - P64
