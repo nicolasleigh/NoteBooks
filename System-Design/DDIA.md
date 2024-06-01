@@ -132,3 +132,32 @@ Declarative query languages let users express what data to retrieve, letting the
 > [Imperative vs. Declarative Query Languages: What’s the Difference?](https://neo4j.com/blog/imperative-vs-declarative-query-languages/)
 
 > DDIA - P64
+
+---
+
+# Storage and Retrieval
+
+### Log-Structured Storage Engines
+
+You can categorize most of the databases in the market today in 2 families of storage engines:
+
+1. Log-structured storage engines.
+2. Page oriented storage engines.
+
+Log-structured storage engine indexes the data in 2 data structures:
+
+1. An in-memory balanced tree data structure, also known as memtable. e.g. AVL trees, Red-black trees. You can keep adding the keys to this data structure and read them back in a sorted manner.
+2. And, a collection of storage segments , also known as Sorted String Table or SSTable in short. Each SSTable is a sorted collection of key-value pair.
+
+A few properties of SSTables are:
+
+1. Keys are sorted in a particular segment.
+2. A particular key can only appear once in a particular segment.
+3. A key can be repeated in multiple segments but has to be unique in a particular segment.
+4. The size SSTables depends on the number of keys contained within it and thus, different SSTables can have different sizes.
+
+Since, the writes are performed in append only fashion, which results in sequential write operation on disk, thus, are much faster than the random writes. Therefore, Log-structured storage engines using LSM-Tree(Log-Structured Merge-Tree) as index are optimized and better suited choice for write-heavy applications. The databases which use Log-structured storage engine includes Bitcask, LevelDB, Google BigTable, RockDB, Cassandra.
+
+> [Log-Structured Storage Engines](https://medium.com/@pnk.tanwar/log-structured-storage-engines-a0c6e78273c)
+
+> DDIA - P92-P101
