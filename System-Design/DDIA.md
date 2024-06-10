@@ -161,3 +161,21 @@ Since, the writes are performed in append only fashion, which results in sequent
 > [Log-Structured Storage Engines](https://medium.com/@pnk.tanwar/log-structured-storage-engines-a0c6e78273c)
 
 > DDIA - P92-P101
+
+---
+
+#### Bitcask
+
+Bitcask offers high-performance reads and writes, subject to the requirement that all the keys fit in the available RAM, since the hash map is kept completely in memory. The values can use more space than there is available memory, since they can be loaded from disk with just one disk seek. If that part of the data file is already in the filesystem cache, a read doesn’t require any disk I/O at all.
+
+A storage engine like Bitcask is well suited to situations where the value for each key is updated frequently. For example, the key might be the URL of a cat video, and the value might be the number of times it has been played (incremented every time someone hits the play button). In this kind of workload, there are a lot of writes, but there are not too many distinct keys—you have a large number of writes per key, but it’s feasible to keep all keys in memory.
+
+If the database is restarted, the in-memory hash maps are lost. Bitcask speeds up recovery by storing a snapshot of each segment’s hash map on disk, which can be loaded into mem‐ory more quickly.
+
+The database may crash at any time, including halfway through appending a record to the log. Bitcask files include checksums, allowing such corrupted parts of the log to be detected and ignored.
+
+#### The limitations of the hash table index
+
+- The hash table must fit in memory, so if you have a very large number of keys, you’re out of luck.
+
+- Range queries are not efficient. For example, you cannot easily scan over all keys between kitty00000 and kitty99999—you’d have to look up each key individually in the hash maps.
