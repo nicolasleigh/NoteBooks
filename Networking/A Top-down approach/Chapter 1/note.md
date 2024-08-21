@@ -138,3 +138,13 @@ Because the **queue capacity** is finite, packet delays do not really approach i
 In addition to delay and packet loss, another critical performance measure in computer networks is end-to-end throughput. For the simple two-link network, the throughput is min{$R_c,R_s$}, that is, it is the transmission rate of the bottleneck link.
 
 **Throughput** depends on the **transmission rates** of the links over which the data flows. When there is no other intervening traffic, the throughput can simply be approximated as the minimum transmission rate along the path between source and destination. More generally the throughput depends not only on the transmission rates of the links along the path, but also on the intervening traffic. In particular, a link with a high transmission rate may nonetheless be the bottleneck link for a file transfer if many other data flows are also passing through that link.
+
+---
+
+**1.5 Protocol Layers and Their Service Models**
+
+A protocol layer can be implemented in software, in hardware, or in a combination of the two. Application-layer protocols—such as HTTP and SMTP—are almost always implemented in software in the end systems; so are transport-layer protocols. Because the physical layer and data link layers are responsible for handling communication over a specific link, they are typically implemented in a **network interface card** (for example, Ethernet or WiFi interface cards) associated with a given link. The network layer is often a mixed implementation of hardware and software.
+
+One potential drawback of layering is that one layer may duplicate lower-layer functionality. For example, many protocol stacks provide error recovery on both a per-link basis and an end-to-end basis. A second potential drawback is that functionality at one layer may need information (for example, a timestamp value) that is present only in another layer; this violates the goal of separation of layers.
+
+Link-layer switches implement layers 1 and 2, routers implement layers 1 through 3. This means, for example, that Internet routers are capable of implementing the IP protocol (a layer 3 protocol), while link-layer switches are not. While link-layer switches do not recognize IP addresses, they are capable of recognizing layer 2 addresses, such as Ethernet addresses. Note that hosts implement all five layers, this is because the Internet architecture puts much of its complexity at the edges of the network.
