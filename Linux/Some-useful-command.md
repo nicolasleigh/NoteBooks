@@ -15,3 +15,7 @@ Rename files from `.en.srt` to `.srt` recursively: [Find multiple files and rena
 ```sh
 find . -iname "*srt*" -exec rename "s/.en.srt$/.srt/" '{}' \;
 ```
+
+```sh
+find . -iname "*vtt*" -exec rename "s/[[:space:]]*English.vtt$/.vtt/" '{}' \;
+```
