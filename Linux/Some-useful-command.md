@@ -19,3 +19,7 @@ find . -iname "*srt*" -exec rename "s/.en.srt$/.srt/" '{}' \;
 ```sh
 find . -iname "*vtt*" -exec rename "s/[[:space:]]*English.vtt$/.vtt/" '{}' \;
 ```
+
+```sh
+find . -iname "*srt*" -exec rename "s/[[:space:]]*English.srt$/.srt/" '{}' \;
+```
