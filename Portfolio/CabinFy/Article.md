@@ -1,11 +1,6 @@
 # Short Explanation
 
-This project was developed as part of my learning journey through [*The Ultimate React Course*](https://www.udemy.com/course/the-ultimate-react-course/) on Udemy, which explores modern technologies such as React, Next.js, and Redux. The primary goal was to deepen my full-stack development skills by implementing best practices in component-based architecture, state management, routing, and responsive design.
-
-Beyond the course material, I extended the project significantly by introducing several custom implementations and enhancements:
-
-* **Custom Backend:** Instead of using [Supabase](https://supabase.com/) as provided in the course, I rebuilt the entire backend from scratch using [PostgreSQL](https://www.postgresql.org/) for the database, [Prisma](https://www.prisma.io/) as the ORM, [Zod](https://zod.dev/) for schema validation, and a custom API built with [Node.js](https://nodejs.org/) and [Express](https://expressjs.com/).
-* **UI Overhaul:** I also redesigned the frontend styling by replacing [styled-components](https://styled-components.com/) with a utility-first approach using [Tailwind CSS](https://tailwindcss.com/) and component abstractions from [shadcn/ui](https://ui.shadcn.com/).
+**CabinFy** is a full-featured accommodation booking platform that connects travelers with unique cabin rentals. It offers an intuitive experience for guests to discover and book cabins, while providing owners with powerful management tools through a secure admin dashboard. Though initially inspired by a React course, I completely rebuilt it with a custom Node.js/Express backend, PostgreSQL database, and modernized UI using Tailwind CSS—transforming it into a production-quality application with multilingual support and responsive design.
 
 # Features
 
@@ -26,32 +21,33 @@ Beyond the course material, I extended the project significantly by introducing 
 
 # Tech Stack
 
-**CabinFy** is built using a modern and scalable full-stack architecture, combining powerful libraries and tools on both the frontend and backend to ensure performance, maintainability, and a smooth developer experience.
+CabinFy is built using a modern and scalable full-stack architecture, designed with performance, maintainability, and developer experience in mind.
 
-#### Frontend
+## Core Technologies
 
-* [**React**](https://react.dev/) – Core library for building dynamic user interfaces
-* [**React Router**](https://reactrouter.com/) – Handles client-side routing and navigation between pages
-* [**Tailwind CSS**](https://tailwindcss.com/) – Utility-first CSS framework for building fast and responsive UIs
-* [**shadcn/ui**](https://ui.shadcn.com/)– Component library for clean, accessible UI elements
-* [**React Query**](https://tanstack.com/query/latest) – Powerful data-fetching and state management solution
-* [**react-i18next**](https://react.i18next.com/) – Internationalization support for English and Chinese
-* [**Axios**](https://axios-http.com/) – Promise-based HTTP client for API communication
-* [**Recharts**](https://recharts.org/) – Elegant charting library used for visualizing sales and analytics
-* **Makefile** – Automates the build process and deployment of frontend assets
-* [**Caddy**](https://caddyserver.com/) – Lightweight static file server used to serve optimized frontend builds
+**Frontend**
 
-#### Backend
+* **React** – Core library for building dynamic user interfaces
+* **Tailwind CSS** – Utility-first CSS framework for building fast and responsive UIs
+* **React Query** – Selected over Redux for its optimized data fetching and caching capabilities
 
-* [**Node.js**](https://nodejs.org/) – JavaScript runtime used for the backend server
-* [**Express**](https://expressjs.com/) – Lightweight web framework for handling routing and server logic
-* [**Passport**](https://www.passportjs.org/) – Extremely flexible and modular authentication middleware for Node.js
-* [**PostgreSQL**](https://www.postgresql.org/) – Relational database system for structured data storage
-* [**Prisma**](https://www.prisma.io/) – Type-safe ORM for database management and queries
-* [**Zod**](https://zod.dev/) – Runtime schema validation for data safety
-* [**Docker**](https://www.docker.com/) – Containerization tool for consistent development and deployment environments
-* **Makefile** – Streamlines repetitive tasks like database migration and seeding
-* [**Caddy**](https://caddyserver.com/) – Reverse proxy server to avoid exposing backend servers
+**Backend**
+
+* **Node.js & Express** – Lightweight yet powerful server framework enabling rapid API development
+* **PostgreSQL & Prisma** – Combination provides type-safe database operations without the need to write raw SQL
+* **Zod** – Implements thorough runtime validation at API boundaries, preventing data corruption
+
+## Technical Highlights
+
+### Authentication System
+
+Built a secure authentication flow combining Passport.js with custom middleware that integrates seamlessly with Prisma's user model, supporting both traditional and OAuth authentication methods.
+
+### Deployment Infrastructure
+
+* **Docker** – Containerized application components for consistent environments across development and production
+* **Caddy** – Configured as both a static file server for the frontend and reverse proxy for backend services, simplifying the deployment architecture
+* **Makefile** – Automated common development tasks and deployment procedures, reducing errors when typing Linux commands
 
 # What I Learned
 
