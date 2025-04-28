@@ -1,6 +1,6 @@
 ### **Project Overview**
 
-**Chatify** is a real-time communication app that supports text messaging, audio calls, and video calls. Initially built using Next.js and Convex, I rebuilt the entire backend with Golang and PostgreSQL to overcome performance bottlenecks and gain more control over database operations. The project demonstrates my ability to optimize systems, handle scalability challenges, and integrate modern web technologies.
+Chatify is a real-time communication app that supports text messaging, audio calls, and video calls. Initially built using Next.js and Convex, I rebuilt the entire backend with Golang and PostgreSQL to overcome performance bottlenecks and gain more control over database operations. The project demonstrates my ability to optimize systems, handle scalability challenges, and integrate modern web technologies.
 
 ### **Motivation**
 
@@ -19,26 +19,26 @@ I was responsible for the full-stack development of the application. This includ
 
 ### **Development Process**
 
-1. **Identifying Bottlenecks**: Noticed database bandwidth consumption hitting 2GB in one week and over 400,000 query calls.
-2. **Root Cause Analysis**: Discovered the N+1 query problem caused by the Convex backend which doesn't support SQL joins.
-3. **System Redesign**: Decided to switch to a custom backend using Golang and PostgreSQL.
-4. **Backend Development**:
+1. Identifying Bottlenecks: Noticed database bandwidth consumption hitting 2GB in one week and over 400,000 query calls.
+2. Root Cause Analysis: Discovered the N+1 query problem caused by the Convex backend which doesn't support SQL joins.
+3. System Redesign: Decided to switch to a custom backend using Golang and PostgreSQL.
+4. Backend Development:
    * Used raw SQL with `sqlc` to generate type-safe database access code.
    * Managed schema migrations with `golang-migrate`.
    * Leveraged `air` for live-reloading during development.
    * Protected environment variables using `direnv`.
-5. **Deployment Setup**: Created a `Dockerfile` and used `docker-compose` to unify the app's services.
-6. **Authentication Integration**: Used Clerk and implemented webhook support to store user authentication data in the backend.
-7. **Real-Time Communication**: Wrote custom WebSocket logic using `gorilla/websocket` and `goRoutines`.
+5. Deployment Setup: Created a `Dockerfile` and used `docker-compose` to unify the app's services.
+6. Authentication Integration: Used Clerk and implemented webhook support to store user authentication data in the backend.
+7. Real-Time Communication: Wrote custom WebSocket logic using `gorilla/websocket` and `goRoutines`.
 
 ### **Tech Stack**
 
-* **Frontend**: Next.js, Tailwind CSS
-* **Backend**: Golang (with `sqlc`, `air`, `direnv`)
-* **Database**: PostgreSQL (schema managed via `golang-migrate`)
-* **WebSocket Library**: `gorilla/websocket`
-* **Authentication**: Clerk + Webhooks
-* **Containerization & Deployment**: Docker, docker-compose, and Caddy
+* Frontend: Next.js, Tailwind CSS
+* Backend: Golang (with `sqlc`, `air`, `direnv`)
+* Database: PostgreSQL (schema managed via `golang-migrate`)
+* WebSocket Library: `gorilla/websocket`
+* Authentication: Clerk + Webhooks
+* Containerization & Deployment: Docker, docker-compose, and Caddy
 
 ### **Key Features**
 
@@ -51,11 +51,11 @@ I was responsible for the full-stack development of the application. This includ
 
 ### **Challenges & Solutions**
 
-* **Convex's Limitations**: Unable to solve N+1 queries due to lack of SQL join support → Solved by switching to PostgreSQL and using raw SQL.
-* **WebSocket Integration in Go**: Socket.io is Node.js-centric → Solved by writing my own WebSocket logic using `gorilla/websocket` and `goRoutines`.
-* **Efficient Development Workflow**: Needed quick iteration during backend development → Solved with tools like `air`, `direnv`, and Docker.
+* Convex's Limitations: Unable to solve N+1 queries due to lack of SQL join support → Solved by switching to PostgreSQL and using raw SQL.
+* WebSocket Integration in Go: Socket.io is Node.js-centric → Solved by writing my own WebSocket logic using `gorilla/websocket` and `goRoutines`.
+* Efficient Development Workflow: Needed quick iteration during backend development → Solved with tools like `air`, `direnv`, and Docker.
 
-### **What I Learned**
+### What I Learned
 
 * How to diagnose and resolve N+1 query issues in real-world applications.
 * Writing and optimizing raw SQL queries for high-performance APIs.
