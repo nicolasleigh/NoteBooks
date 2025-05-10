@@ -1,6 +1,6 @@
 ### Project Overview
 
-The Blog App is a platform designed to showcase my portfolio projects and share technical articles with a wider audience. As the admin, I can create, edit, and manage blog posts, while users can browse the posts, view information about me, and explore my portfolio. The blog supports both English and Chinese, allowing users to filter posts by tags. Each post includes two statistics: the number of views and the number of likes.
+Linze.pro is a platform designed to showcase my portfolio projects and share technical articles with a wider audience. As the admin, I can create, edit, and manage blog posts, while users can browse the posts, view information about me, and explore my portfolio. The blog supports both English and Chinese, allowing users to filter posts by tags.
 
 ### Motivation
 
@@ -18,7 +18,7 @@ Backend Development: I used Golang and the chi framework for building the RESTfu
 
 Database Design: PostgreSQL was chosen for its reliability and scalability. I structured the database to handle blog posts, tags, user statistics (likes, views), and multilingual content.
 
-Deployment & DevOps: The app is dockerized for easy deployment using Docker and Docker Compose. Caddy is used as a reverse proxy server to serve static files. I set up GitHub actions for continuous integration and delivery.
+Deployment & DevOps: The app is dockerized for easy deployment using Docker and Docker Compose. Caddy is used as a reverse proxy and static file server. I set up GitHub actions for continuous integration and delivery.
 
 Testing & Debugging: To ensure the app’s reliability, I implemented unit and integration tests, while logging and monitoring were set up to keep track of any issues.
 
@@ -52,8 +52,6 @@ Multilingual Content Management: Handling different languages for the blog posts
 
 Security and Performance: Implementing secure JWT authentication and strict CORS policies, as well as optimizing performance with Redis caching, were critical for both security and the user experience.
 
-Containerization & Deployment: Setting up Docker and Docker Compose for development and production environments required fine-tuning to ensure smooth deployment. This was resolved by thorough testing and adjusting configurations.
-
 ### What I Learned
 
 Full-Stack Development: I deepened my knowledge in building full-stack applications, especially with Golang as a backend technology.
@@ -64,12 +62,8 @@ Multilingual App Design: Creating a multilingual platform helped me understand t
 
 ### Future Improvements
 
-Advanced Analytics: Adding more detailed analytics, such as post engagement metrics, will enhance the overall user experience.
-
-User Authentication Enhancements: Implementing OAuth for social login options could improve the user registration and login process.
-
 SEO Optimization: Improving search engine optimization (SEO) for better discoverability of blog posts.
 
 ### Summary
 
-This Blog App serves as a platform to showcase my portfolio, share insights, and interact with readers. By using modern technologies like Vue.js, Golang, and Docker, I have built a secure, scalable, and feature-rich app. This project reflects my ability to manage both frontend and backend development while utilizing industry-standard tools and practices.
+This Blog app serves as a platform to showcase my portfolio, share insights, and interact with readers. By using modern technologies like Vue.js, Golang, and Docker, I have built a secure, scalable, and feature-rich app. This project reflects my ability to manage both frontend and backend development while utilizing industry-standard tools and practices.
