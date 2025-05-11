@@ -1,4 +1,4 @@
-# 如何使用 Docker、Docker Compose、Makefile 和 Caddy 部署全栈应用 —— 以该博客为例
+# 如何使用 Docker、Docker Compose、Makefile 和 Caddy 部署全栈应用 —— 以本博客为例
 
 ## 1. 项目概述
 
@@ -33,7 +33,7 @@ linze.pro 是我的个人博客应用，它允许我发布和管理博客文章�
   └── resources/
   ```
 
-## 3. Dockerfile
+## 2. Dockerfile
 
 以下是 Go 后端的 `Dockerfile`：
 
@@ -68,7 +68,7 @@ linze.pro 是我的个人博客应用，它允许我发布和管理博客文章�
   CMD ["app"]
   ```
 
-  ## 4. compose.yaml
+  ## 3. compose.yaml
 
 为了编排 `linze.pro` 博客应用中的所有服务，我使用 Docker Compose。以下是 `compose.yaml` 文件：
 
@@ -113,6 +113,8 @@ services:
     image: redis:6.2-alpine
     restart: always
     container_name: blog-redis
+    networks:
+      - backend_network
     command: redis-server --save 60 1 --loglevel warning
 
 secrets:
@@ -148,7 +150,7 @@ networks:
 
 * **用于缓存或速率限制的轻量级内存存储。**
 
-## 5. Caddy设置
+## 4. Caddy设置
 
 Caddy是一个功能强大的Web服务器，它支持自动HTTPS、反向代理和静态文件服务。以下是在`linze.pro`项目中使用的`Caddyfile`：
 
@@ -203,7 +205,7 @@ file.linze.pro {
 * `header`: 设置 CORS 头，允许其他来源访问资源。因为我的项目使用HLS流式传输视频，这涉及通过 JavaScript 加载 `.m3u8` 和 `.ts` 文件，所以必需设置该 CORS 头。如果你的视频是普通 MP4 文件，则通常不需要此 CORS 配置。
 * `file_server browse`: 启用目录列表。
 
-## 6. Makefile
+## 5. Makefile
 
 `Makefile` 用于自动化频繁任务，如Docker编排、数据库管理、前端部署和远程同步。以下是其结构： 
 
@@ -301,7 +303,7 @@ bs: frontend/build frontend/send
 - `frontend/send`: 通过 `rsync` 将构建后的文件部署到远程服务器。
 - `bs`: 构建并发送的一键快捷命令。
 
-## 7. Docker、Compose、Makefile 与 Caddy 如何协同工作
+## 6. Docker、Compose、Makefile 与 Caddy 如何协同工作
 
 在本项目中，每个工具各司其职，共同构建出一套流畅、自动化的开发与部署流程：
 
@@ -354,7 +356,7 @@ Caddy 路由规则：
 3. 构建并部署前端：`make bs`
 4. 访问应用地址：`https://linze.pro`
 
-## 8. 小贴士与问题排查
+## 7. 小贴士与问题排查
 
 以下是我在开发过程中踩过的坑和总结出的一些实用经验，希望能帮你少走弯路：
 
@@ -388,7 +390,7 @@ ssh-add ~/.ssh/id_rsa
 
 > 否则，即使你能通过 `ssh` 登录，`rsync` 也可能会因权限错误而失败。
 
-## 9. 总结
+## 8. 总结
 
 在这篇文章中，我分享了我是如何将 Docker、Docker Compose、Makefile 和 Caddy 结合在一起，构建并部署我的全栈博客项目的。每个工具都有它明确的职责：
 

@@ -1,4 +1,4 @@
-### 8 different ways to create a new object
+### 1. 8 different ways to create a new object
 
 1.  Object literal
 
@@ -427,7 +427,7 @@ Remember that Pure functions are important as they simplify unit testing without
   ```javascript
   var foo = 'Foo 1';
   var foo = 'Foo 2'; // No problem, 'foo' is replaced.
-
+  
   let bar = 'Bar 1';
   let bar = 'Bar 2'; // SyntaxError: Identifier 'bar' has already been declared
   ```
